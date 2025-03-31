@@ -24,6 +24,8 @@ export default function Main() {
     function handleSubmit(e) {
         e.preventDefault()
 
+        console.log(postForm);
+        
         fetch(url, {
             method: 'POST',
             body: JSON.stringify(postForm)
