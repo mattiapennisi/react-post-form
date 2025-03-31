@@ -95,15 +95,6 @@ export default function Main() {
                 <button type="submit" className="btn btn-primary mb-4">Add post</button>
             </form>
 
-            <div className="card my-5" style={{ width: "8rem" }}>
-                <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">{postForm.author}</h5>
-                    <h6 className="card-subtitle mb-2 text-muted">{postForm.title}</h6>
-                    <p className="card-text">{postForm.body}</p>
-                    {postForm.public && <span className="badge bg-success">Public</span>}
-                </div>
-            </div>
         </main>
     )
 }
