@@ -28,6 +28,9 @@ export default function Main() {
 
         fetch(url, {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(postForm)
         })
             .then(res => res.json())
