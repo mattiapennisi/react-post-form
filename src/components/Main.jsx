@@ -25,7 +25,7 @@ export default function Main() {
         e.preventDefault()
 
         console.log(postForm);
-        
+
         fetch(url, {
             method: 'POST',
             body: JSON.stringify(postForm)
@@ -33,14 +33,17 @@ export default function Main() {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                alert('Data sent succesfully')
             })
             .catch(err => {
                 console.error(err)
+                alert('Something went wrong')
             })
     }
 
     return (
         <main id="main" className='p-4'>
+            <h1 className='text-center mb-4'>Blog Posts Dashboard</h1>
             <form className='d-flex container flex-column' onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <input
@@ -86,7 +89,7 @@ export default function Main() {
                     />
                     <label className="form-check-label" htmlFor="publicInput">Public</label>
                 </div>
-                <button type="submit" className="btn btn-primary mb-4">Submit</button>
+                <button type="submit" className="btn btn-primary mb-4">Add post</button>
             </form>
 
             <div className="card my-5" style={{ width: "8rem" }}>
